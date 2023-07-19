@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_287_5907646_sb2_248" standard="STDTMPLCUSTPYMT">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>PDF Estados de Cuenta</title>
+  <trantype>CUSTPYMT</trantype>
+</advancedpdftemplate>

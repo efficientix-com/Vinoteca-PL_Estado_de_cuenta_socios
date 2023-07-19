@@ -1,0 +1,36 @@
+<manifest projecttype="ACCOUNTCUSTOMIZATION">
+  <projectname>Estado de cuenta socios</projectname>
+  <frameworkversion>1.0</frameworkversion>
+  <dependencies>
+    <features>
+      <feature required="false">MULTILANGUAGE</feature>
+      <feature required="true">SERVERSIDESCRIPTING</feature>
+      <feature required="true">ADVANCEDPRINTING</feature>
+      <feature required="true">ACCOUNTING</feature>
+      <feature required="false">CRM</feature>
+      <feature required="false">CUSTOMSEGMENTS</feature>
+      <feature required="false">EXTREMELIST</feature>
+      <feature required="true">MULTPRICE</feature>
+      <feature required="false">MAILMERGE</feature>
+      <feature required="true">CUSTOMRECORDS</feature>
+      <feature required="false">CREATESUITEBUNDLES</feature>
+    </features>
+    <objects>
+      <object>customrecord_cseg_efx_cstsg_cana</object>
+      <object>customrecord_psg_ei_template</object>
+      <object>customlist_efx_pl_prefix_cards</object>
+      <object>customrecord_efx_lealtad_config.val_434829_5907646_588</object>
+      <object>customrole_efx_yaax_rol</object>
+      <object>customrecord_mx_sat_cfdi_usage</object>
+      <object>customrecord_mx_mapper_values</object>
+      <object>customlist_efx_lealtad_metodosdebonifi</object>
+      <object>customrecord_mx_sat_payment_term</object>
+      <object>customlist_efx_lealtad_estado_red_bon</object>
+      <object>customlist_efx_notas_credito_tipos</object>
+      <object>customrecord_efx_lealtad_niveleslealtalt</object>
+      <object>customrecord_ei_sending_method</object>
+      <object>customlist_efx_lealtad_listatipoabono</object>
+      <object>customrole1056</object>
+    </objects>
+  </dependencies>
+</manifest>

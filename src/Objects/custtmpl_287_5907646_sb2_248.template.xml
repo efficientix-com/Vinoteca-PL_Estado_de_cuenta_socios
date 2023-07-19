@@ -1,0 +1,344 @@
+        <!--?xml version="1.0"?-->
+        <!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+        <pdf>
+            
+            <head>
+
+                
+                <style>
+                table.padded-table td {
+                    /*padding-top: 2px;
+                    padding-right: 2px;
+                    padding-bottom: 2px;
+                    padding-left: 2px;*/
+                }
+
+                .tdheader {
+                    border-top: thin;
+                    border-bottom: thin;
+                    color: #FFFFFF;
+                    background-color: #000000;
+                }
+
+                .blrb {
+                    border-left: thin;
+                    border-right: thin;
+                    border-bottom: none;
+                }
+
+                .blrbt {
+                    border-left: thin;
+                    border-right: thin;
+                    border-bottom: thin;
+                    border-top: thin;
+                }
+
+                .brbt {
+                    border-right: thin;
+                    border-bottom: thin;
+                    border-top: thin;
+                }
+
+                .brb {
+                    border-right: thin;
+                    border-bottom: none;
+                }
+
+                body,
+                p,
+                td,
+                th {
+                    font-family: Helvetica;
+                    font-size: 11pt;
+                }
+
+                th {
+                    font-weight: bold;
+                    color: #ffffff;
+                    background-color: #777777;
+                }
+
+                .headline {
+                    font-family: Helvetica;
+                    font-size: 17pt;
+                    font-weight: bold;
+                }
+
+                .disclaimer {
+                    font-family: Helvetica;
+                    font-size: 9pt;
+                }
+
+                .lined {
+                    border: solid #777777;
+                }
+
+                .text {
+                    font-family: Arial, Helvetica;
+                    font-size: 9pt;
+                    vertical-align: top;
+                    background-color: #FFFFFF
+                }
+
+                .texttablebold {
+                    font-family: Arial, Helvetica;
+                    font-size: 9pt;
+                    color: #FFFFFF;
+                    background-color: #000000
+                }
+
+
+                .ss12b {
+                    font-family: Arial;
+                    font-size: 12pt;
+                    font-weight: bold;
+
+                    color: #000000;
+                    
+                }
+                .ss12c {
+                    font-family: Arial;
+                    font-size: 9pt;
+                    background-color: #FFFFFF;
+                    color: #000000;
+                    
+                }
+
+                .columnas {
+                    font-family: Arial;
+                    background-color: #9C0434S;
+                    color:#FFFFFF;
+                    border: 0.5px solid gray;
+            
+                }
+
+                
+
+                .edoCuenta {
+                    font-family: Arial;
+                    font-size: 20px;
+                    font-weight: bold;
+                    background-color: #FFFFFF;
+                    color: #8a8a8a;
+                    
+                }
+
+                .headrepeat {
+                    display: table-header-group
+                }
+
+                .break {
+                    page-break-before: always;
+                }
+                </style>
+                
+                
+            </head>
+                
+            <body>
+                <table border="0"  width="100%">
+                    <thead>
+                        <tr>
+                            <td>
+                                <table border="0"  width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td valign="top" width="70%" style ="margin-top:20px" >
+                                                <table   width="100%">
+                                                    <tbody>
+                                                        <tr style= "text-align:right">
+                                                            <td 
+                                                            style= "text-align:right">
+                                                            <#if records.logo?has_content>
+                                                                <#assign "urldir" = records.logo>
+                                                                    <img src="${urldir}" style=" width: 250px; height: 50px;"/>    
+                                                            <#else>
+                                                                Vinoteca
+                                                            </#if>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="30%" style ="margin-top:20px;">
+                                                <table   width="100%" >
+                                                    <tbody >
+                                                        <tr >
+                                                            <td class="edoCuenta" align="right">
+                                                                <span style="font-size: 20px">
+                                                                    Estados de Cuenta
+                                                                </span>
+                                                            
+                                                            <br/>
+                                                            </td>
+                                                        </tr>
+                                                        <#--  <tr>
+                                                            <td class="text">
+                                                                ${companyInformation.addressText}
+                                                            </td>
+                                                        </tr>  -->
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td valign="top" width="50%" style ="margin-top:30px" >
+                                                <table  width="100%">
+                                                    <tbody>
+                                                        <tr style= "text-align:right">
+                                                            <td class="ss12c" style= "text-align:right">
+                                                            Vinoteca Mexico S.A de C.V<br/>
+                                                            San Pedro Garza Garcia N.L: 66220 <br/>
+                                                            ${records.phone}
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="50%" style ="margin-top:30px;">
+                                                <table   width="100%" >
+                                                    <tbody >
+                                                        <tr >
+                                                            <td class="ss12c" align="right">
+                                                                <span>
+                                                                    FECHA DE EMISION: ${records.dateCreation}
+                                                                </span>
+                                                            
+                                                            <br/>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td valign="top" width="70%" style ="margin-top:10px" >
+                                                <table  width="100%">
+                                                    <tbody>
+                                                        <tr style= "text-align:right">
+                                                            <td class="ss12c" style= "text-align:right">
+                                                                <span style = "font-weight: bold;">
+                                                                    CON:
+                                                                </span><br/>
+                                                                Nombre(s) del Socio:${records.namePartner}<br/>
+                                                                Nivel de lealtad:  ${records.lealtadLevel} <br/>
+                                                                Numero de membresía:  ${records.membership} <br/>
+                                                                Saldo actual: ${records.pointsMember}<br/>
+
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </td>
+
+                        </tr>
+                    </thead>
+                </table>
+                
+                <table border = "0" width="100%">
+
+                    <tr>
+                        <td valign="top" width="100%" style ="margin-top:40px" >
+                            <table  width="100%">
+                                <tbody>
+                                    <tr style= "text-align:right">
+                                        <td class="ss12c" style= "text-align:right">
+                                            <span style = "font-weight: bold;">
+                                                COMENTARIOS O INSTRUCCIONES ESPECIALES:
+                                            </span><br/>
+                                            Las transacciones pueden tardar hasta 24 horas en verse reflejadas. Información vigente a fecha de emisión de este documento. 
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table  class = "itemtable" style="width: 100%; margin-top: 40px;">
+                    <#--  <thead>  -->
+                        <tr>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 10%;" class = "columnas"  align= "center" ><span style="font-size:9px;">FECHA</span></th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 24%;" class = "columnas"  align= "center" ><span style="font-size:9px;text-align: center;">TIPO</span></th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 12%;" class = "columnas"  align= "center" ><span style="font-size:9px;text-align: center;">&nbsp;&nbsp;NÚMERO DE <br/>TRANSACCION</span></th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 15%;" class = "columnas"  align= "center" ><span style="font-size:9px;">SUCURSAL</span></th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 13%;" class = "columnas"  align= "center" ><span style="font-size:9px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUNTOS<br/> BONIFICADOS</span></th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 13%;" class = "columnas"  align= "center" ><span style="font-size:9px;">&nbsp;&nbsp;&nbsp;PUNTOS <br/>UTILIZADOS</span></th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 13%;" class = "columnas"  align= "center" ><span style="font-size:9px;">TOTAL DE <br/>&nbsp;&nbsp;&nbsp;TICKET</span></th>
+                        </tr>
+                    <#--  </thead>  -->
+                    <#list records.transactions as transaction>
+                        <tr>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 10%; background-color: #FFFFFF; border: 0.5px solid gray;" align= "center" >
+                                <span style ="color:black; font-weight: normal;font-size:9px;">${transaction.dateCreation}</span>
+                            </th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 24%; background-color: #FFFFFF; border: 0.5px solid gray;" align= "center" >
+                                <span style ="color:black; font-weight: normal;font-size:9px;">${transaction.typeTransaction}</span>
+                            </th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 12%; background-color: #FFFFFF; border: 0.5px solid gray;" align= "center" >
+                                <span style ="color:black; font-weight: normal;font-size:9px;">${transaction.numTransaction}</span>
+                            </th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 15%; background-color: #FFFFFF; border: 0.5px solid gray;" align= "center" >
+                                <span style ="color:black; font-weight: normal;font-size:9px;">${transaction.location}</span>
+                            </th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 13%; background-color: #FFFFFF; border: 0.5px solid gray;" align= "center" >
+                                <span style ="color:black; font-weight: normal;font-size:9px;">${transaction.bonusPoints}</span>
+                            </th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 13%; background-color: #FFFFFF; border: 0.5px solid gray;" align= "center" >
+                                <span style ="color:black; font-weight: normal;font-size:9px;">${transaction.pointsUsed}</span>
+                            </th>
+                            <th  style ="padding:5pt 5pt 5pt 5pt; width: 13%; background-color: #FFFFFF; border: 0.5px solid gray;" align= "center" >
+                                <#assign numero = transaction.ammountTransaction>
+                                <span style ="color:black;font-weight: normal;font-size:9px;">$ ${numero}</span>
+                            </th>
+                        </tr>
+                    </#list>
+                    
+                </table>
+
+                <table border = "0" width="100%">
+                    <tr>
+                        <td valign="top" width="100%" style ="margin-top:40px" >
+                            <table  width="100%">
+                                <tbody>
+                                    <tr style= "text-align:right">
+                                        <td class="ss12c" style= "text-align:right">
+                                            <#--  <span >  -->
+                                            Si tienes alguna pregunta o aclaración favor de enviar correo a infosocios@vinoteca.com, y agregar Nombre completo, Teléfono, Correo, Numero de membresía
+                                            <#--  </span>  -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table border = "0" width="100%">
+                    <tr>
+                        <td valign="top" width="100%" style ="margin-top:40px" >
+                            <table  width="100%">
+                                <tbody>
+                                    <tr style= "text-align:center">
+                                        <td class="ss12c" style= "text-align:center" align ="center">
+                                            <span style = "font-weight: bold;">
+                                            Gracias por tu confianza
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            </body>
+        </pdf>

@@ -1,0 +1,55 @@
+<suitelet scriptid="customscript_tkiio_pl_edo_account_partne">
+  <description>Script que servirá de pantalla para el módulo de Estados de Cuenta de Socios</description>
+  <isinactive>F</isinactive>
+  <name>TKIIO - Estados de Cuenta Socio - SL</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/Lealtad/Estados de cuenta Socios/tkiio_pl_estados_cuenta_socio.js]</scriptfile>
+  <scriptcustomfields>
+    <scriptcustomfield scriptid="custscript_tkiio_pdf_template">
+      <accesslevel>2</accesslevel>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>Campo que servirá para almacenar la plantilla PDF que imprimirá el estado de Cuenta</description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <fieldtype>SELECT</fieldtype>
+      <help>Seleccione la plantilla PDF que servirá para impresión del estado de cuenta</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <label>Plantilla PDF</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>[scriptid=customrecord_efx_lealtad_config]</selectrecordtype>
+      <setting></setting>
+      <storevalue>T</storevalue>
+    </scriptcustomfield>
+  </scriptcustomfields>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_tkiio_pl_edo_account_sl">
+      <allemployees>T</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <custscript_tkiio_pdf_template>[scriptid=customrecord_efx_lealtad_config.val_434829_5907646_588]</custscript_tkiio_pdf_template>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>TKIIO - Estados de Cuenta Socio - SL</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>
